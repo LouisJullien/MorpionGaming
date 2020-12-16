@@ -1,3 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Nunito:wght@800&display=swap');
+
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     color: black;
+    text-align: center;
+    font-family: 'Nunito';
+}
+
+#button {
+    text-align: center;
+}
+
+button {
+    font-family: 'Nunito';
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 3px 3px 3px grey;
+}
+
+#body{
+    text-align: center;
 }
