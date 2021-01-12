@@ -32,11 +32,11 @@ app.get('/', (req, res, next) => {
 
 });
 
-app.get('/page2', (req, res, next) => {
-    res.render('page2.ejs');
+app.get('/game', (req, res, next) => {
+    res.render('game.ejs');
 });
 
-app.post( '/page2', (req, res, next) => {
+app.post( '/game', (req, res, next) => {
     console.log(req.body.name);
 });
 
