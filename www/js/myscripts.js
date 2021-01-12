@@ -9,6 +9,7 @@ function main() {
         joueurs[tour] +
         " c'est votre tour."
     );
+    
     for (var i = 0, len = pions.length; i < len; i++) {
       pions[i].addEventListener("click", function() {
         if (jeuEstFini) return;
