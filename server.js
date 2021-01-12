@@ -36,15 +36,16 @@ app.get('/joueur1', (req, res, next) => {
     res.render('joueur1.ejs');
 });
 
-app.post( '/joueur1', (req, res, next) => {
+app.post('/joueur1', (req, res, next) => {
     console.log(req.body.name);
+    res.redirect('joueur2');
 });
 
 app.get('/joueur2', (req, res, next) => {
     res.render('joueur2.ejs');
 });
 
-app.post( '/joueur2', (req, res, next) => {
+app.post('/joueur2', (req, res, next) => {
     console.log(req.body.name);
 });
 
