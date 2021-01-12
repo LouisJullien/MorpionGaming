@@ -76,5 +76,32 @@ for(var j = 0 ; j < nbColonnes-1 ; j++)
 
 ctx.closePath();
 
+c.addEventListener("click", play, false);
 
+// Creation des croix
+function createCroix(x,y)
+{
+	// x,y est le centre de la croix
+	ctx.beginPath();
+	ctx.lineWidth = epaisseurCroix;
+	ctx.strokeStyle  = couleurCroix;
+	ctx.moveTo(x - (largeurColonne/2)*ratioCroix, y - (hauteurLigne/2)*ratioCroix );
+	ctx.lineTo(x + (largeurColonne/2)*ratioCroix, y + (hauteurLigne/2)*ratioCroix );
 
+	ctx.moveTo(x + (largeurColonne/2)*ratioCroix, y - (hauteurLigne/2)*ratioCroix );
+	ctx.lineTo(x - (largeurColonne/2)*ratioCroix, y + (hauteurLigne/2)*ratioCroix );
+
+	ctx.stroke();
+	ctx.closePath();
+}
+
+// Creation des ronds
+function createRond(x,y)
+{
+	// x,y est le centre du rond
+	ctx.beginPath();
+	ctx.lineWidth = epaisseurRond ;
+	ctx.strokeStyle = couleurRond ;
+	ctx.arc(x,y,rayonRond,0,2*Math.PI);
+	ctx.stroke();
+}
