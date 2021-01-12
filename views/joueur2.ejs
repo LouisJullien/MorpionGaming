@@ -1,0 +1,17 @@
+<%- include ('header'); %>
+
+
+<div class="row">
+    <div class="col text-center">
+        <p> Pseudo joueur 2 : </p>
+        <form action="joueur2" method="post">
+            <input type="text" id="name" name="name" required minlength="1"
+            maxlength="30" size="10" placeholder="Prénom">
+            <br>
+            <input type="submit" id="bouton" value="Validez"></input>
+
+        </form>
+    </div>
+</div>
+
+<%- include ('footer'); %>
