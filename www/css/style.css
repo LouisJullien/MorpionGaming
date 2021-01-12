@@ -1,25 +1,21 @@
 
-#morpion {
-    border-collapse: collapse;
+  #Jeu {
+    display: inline-block;
     margin: 0 auto;
-    background-color: #3d545c;
-    border: 5px solid #d08738;
-    box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.75);
-}
-#morpion td {
-    border: 3px solid white;
-    width: 8em;
-    height: 8em;
-    font-family: 'FontAwesome';
-    text-align: center;
-}
-#morpion td.cross::before {
-    content: '\f00d';
-    font-size: 5em;
-    color: blue;
-}
-#morpion td.circle::before {
-    content: '\f10c';
-    font-size: 5em;
-    color: red;
-}
+    padding: 10px;
+  }
+  
+  #Jeu div {
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  #Jeu button {
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 5px;
+    float:left;
+  }
+  
