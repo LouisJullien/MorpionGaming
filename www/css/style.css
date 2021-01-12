@@ -7,6 +7,7 @@
 body, html{
     margin: 0;
     padding: 0;
+
 }
 
 h1 {
@@ -30,6 +31,21 @@ button {
     box-shadow: 3px 3px 3px grey;
 }
 
+#bouton{
+    margin-top: 50px;
+    font-family: 'Nunito';
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 3px 3px 3px grey;
+
+}
+
 #body{
     text-align: center;
+}
+
+.row{
+    margin-top: 150px;
 }
