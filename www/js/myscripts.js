@@ -1,4 +1,3 @@
-
 var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
 
@@ -75,3 +74,5 @@ for(var j = 0 ; j < nbColonnes-1 ; j++)
 }
 
 ctx.closePath();
+
+
