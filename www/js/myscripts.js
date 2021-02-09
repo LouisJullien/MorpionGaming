@@ -1,3 +1,4 @@
+
 var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
 
@@ -75,7 +76,7 @@ for(var j = 0 ; j < nbColonnes-1 ; j++)
 
 ctx.closePath();
 
-// Creation de croix
+// Creation des croix
 function createCroix(x,y)
 {
 	// x,y est le centre de la croix
@@ -84,6 +85,7 @@ function createCroix(x,y)
 	ctx.strokeStyle  = couleurCroix;
 	ctx.moveTo(x - (largeurColonne/2)*ratioCroix, y - (hauteurLigne/2)*ratioCroix );
 	ctx.lineTo(x + (largeurColonne/2)*ratioCroix, y + (hauteurLigne/2)*ratioCroix );
+
 
 	ctx.moveTo(x + (largeurColonne/2)*ratioCroix, y - (hauteurLigne/2)*ratioCroix );
 	ctx.lineTo(x - (largeurColonne/2)*ratioCroix, y + (hauteurLigne/2)*ratioCroix );
@@ -138,3 +140,9 @@ if(jeu) // Si jeu en route
 	}
 }
 }
+
+
+
+
+
+
