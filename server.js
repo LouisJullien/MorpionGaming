@@ -32,6 +32,13 @@ app.get('/', (req, res, next) => {
 
 });
 
+app.get('/game', (req, res, next) => {
+    res.render('game.ejs');
+});
+
+app.post( '/game', (req, res, next) => {
+    console.log(req.body.name);
+});
 
 app.get('/joueur1', (req, res, next) => {
     res.render('joueur1.ejs');
