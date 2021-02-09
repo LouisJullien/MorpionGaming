@@ -1,5 +1,5 @@
 // Recuperation du canvas
-var c = document.getElementById("canvasMorpion");
+var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
 
 // Recuperation tailles
