@@ -63,3 +63,45 @@ button {
     margin-top: 150px;
 }
 
+#game{
+    text-align: center;
+}
+
+#rejouer {
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    
+}
+#rejouer:hover {
+    text-decoration: none;
+    color: lightgrey;
+    border: 3px solid lightgrey;
+    
+}
+
+#quittez {
+    padding: 10px;
+    color: white;
+}
+
+#quittez:hover {
+    text-decoration: none;
+    color: lightgrey;
+    
+}
+
+#jouer {
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+}
+
+#jouer:hover {
+    text-decoration: none;
+    color: lightgrey;
+    border: 3px solid lightgrey;
+    
+}
