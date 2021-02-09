@@ -75,4 +75,66 @@ for(var j = 0 ; j < nbColonnes-1 ; j++)
 
 ctx.closePath();
 
+// Creation de croix
+function createCroix(x,y)
+{
+	// x,y est le centre de la croix
+	ctx.beginPath();
+	ctx.lineWidth = epaisseurCroix;
+	ctx.strokeStyle  = couleurCroix;
+	ctx.moveTo(x - (largeurColonne/2)*ratioCroix, y - (hauteurLigne/2)*ratioCroix );
+	ctx.lineTo(x + (largeurColonne/2)*ratioCroix, y + (hauteurLigne/2)*ratioCroix );
 
+	ctx.moveTo(x + (largeurColonne/2)*ratioCroix, y - (hauteurLigne/2)*ratioCroix );
+	ctx.lineTo(x - (largeurColonne/2)*ratioCroix, y + (hauteurLigne/2)*ratioCroix );
+
+	ctx.stroke();
+	ctx.closePath();
+}
+
+// Creation de rond
+function createRond(x,y)
+{
+	// x,y est le centre du rond
+	ctx.beginPath();
+	ctx.lineWidth = epaisseurRond ;
+	ctx.strokeStyle = couleurRond ;
+	ctx.arc(x,y,rayonRond,0,2*Math.PI);
+	ctx.stroke();
+}
+
+// Evenement clic
+c.addEventListener("click", play, false);
+
+function play(event)
+{
+	x = event.clientX - c.offsetLeft ;
+y = event.clientY - c.offsetTop + document.documentElement.scrollTop;
+
+var caseX = parseInt(x/(largeur/nbColonnes));
+var caseY = parseInt(y/(hauteur/nbLignes));
+
+var milieuX = caseX*largeurColonne + largeurColonne/2 ;
+var milieuY = caseY*hauteurLigne + hauteurLigne/2 ;
+
+if(jeu) // Si jeu en route
+{
+	if(!coups[caseY][caseX]) // Si pas déjà quelque chose sur la meme case
+	{        
+        if(joueurActuel)
+		{
+			createCroix(milieuX,milieuY);
+			coups[caseY][caseX] = "croix" ; 
+			document.getElementById("joueur").innerHTML = "Au joueur 2 de placer un rond";
+		}
+		else
+		{
+			createRond(milieuX,milieuY);
+			coups[caseY][caseX] = "rond" ; 
+			document.getElementById("joueur").innerHTML = "Au joueur 1 de placer une croix";
+		}
+
+		joueurActuel = !joueurActuel ;
+	}
+}
+}
